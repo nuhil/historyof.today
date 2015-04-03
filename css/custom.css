@@ -1,0 +1,7 @@
+a {
+	cursor: pointer;
+}
+
+a.logo:hover {
+	text-decoration: none;
+}
