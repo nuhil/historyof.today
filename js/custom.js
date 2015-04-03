@@ -67,7 +67,7 @@
 
     function prepareFacts(country, month, day) {
         $.ajax({
-            url: "http://nuhil.github.io/historyof.today/"+country+"/"+month+"/"+day+".txt",
+            url: "http://127.0.0.1/historyof.today/"+country+"/"+month+"/"+day+".txt",
             cache: false,
             dataType: "text",
             success: function( data, textStatus, jqXHR ) {
