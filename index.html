@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="icon" href="img/favicon.ico">
+    <title>History of Today</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+    <link href="css/flag.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="#" data-toggle="modal" data-target=".about-us-modal-sm">আমাদের সম্পর্কে</a></li>
+            <li role="presentation"><a href="#" data-toggle="modal" data-target=".contribute-modal-sm">সম্পৃক্ত হোন</a></li>
+            <li role="presentation"><a href="#" data-toggle="modal" data-target=".contact-us-modal-sm">যোগাযোগ</a></li>
+          </ul>
+        </nav>
+
+        <a href="" class="logo">
+          <h3 class="text-muted"><span class="flag" id="flag"></span>History<small>of.today</small></h3>
+        </a>
+      </div>
+
+      <div class="jumbotron">
+        <h1>আজকের দিনের ইতিহাস</h1>
+        <h1 id="today"></h1>
+        <nav>
+          <ul class="pager">
+            <li class="previous"><a id="prev"><span aria-hidden="true">&larr;</span> পূর্ববর্তী দিন</a></li>
+            <li class="next"><a id="next">পরবর্তী দিন <span aria-hidden="true">&rarr;</span></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12" id="facts"></div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; historyof.today 2015</p>
+      </footer>     
+
+    </div> <!-- /container -->    
+
+    <div class="modal fade about-us-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">আমাদের সম্পর্কে</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                এই সার্ভিসের মুল উদ্দেশ্য হচ্ছে একটি ফ্যাক্ট বুক হিসেবে প্রতিটি দেশের কিছু গুরুত্বপূর্ণ ঘটনা গুলোকে তারিখ অনুযায়ী সাজিয়ে রাখা। এক্ষেত্রে তথ্য গুলো আসবে পাবলিক কন্ট্রিবিউশনের মাধ্যমে।
+              </p>
+              <p>
+                সাইটটি ব্রাউজ করলে প্রথমেই এটি আপনার অবস্থানের উপর ভিত্তি করে সেই দেশের তথ্য গুলো আজকের তারিখ অনুযায়ী খুঁজে বের করবে এর কাছে থাকা সাধারণ টেক্সট ফাইল থেকে।  
+              </p>
+              <p>
+                এছাড়া নির্দিষ্ট কোন তারিখের ঘটনা জানতে ব্রাউজারের অ্যাড্রেসবারে লিখতে পারেন http://SITE/#Month-Day ফরম্যাটে অথবা পূর্ববর্তী, পরবর্তী দিন বাটন ব্যবহার করতে পারেন।
+              </p>
+            </div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="modal fade contribute-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">সম্পৃক্ত হোন</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                আমাদের পুরো ওয়েব অ্যাপটি ওপেন সোর্স এবং এখানে যুক্ত হওয়া তথ্য গুলোও আসে পাবলিক কন্ট্রিবিউশনের মাধ্যমে। অর্থাৎ আপনি চাইলে এই সাইটের কারিগরি বিষয় গুলোতেও অবদান রাখতে পারেন অথবা শুধুমাত্র তথ্য দিয়েও অবদান রাখতে পারেন
+              </p>
+              <p>
+                এর জন্য প্রথমেই আপনাকে আমাদের পাবলিক github <a href="https://github.com/nuhil/historyof.today" target="_blank">রিপোজিটরিটি</a> fork করে নিতে হবে এবং প্রয়োজনীয় পরিবর্তন করে আমাদের মুল রিপোতে pull request দিতে হবে। এরপর আপনার যোগ করা অংশ বিচার করে মুল সাইটের সাথে যুক্ত করে নেয়া হবে।  
+              </p>
+              <p>
+                কারিগরি বিষয়ে অবদান রাখতে আপনার প্রয়োজন হবে ওয়েব টেকনোলজির উপর সম্যক ধারনা। এই ভার্সনে ব্যবহৃত হচ্ছে Javascript, HTML এবং CSS. অ্যাপটি হোস্ট করা আছে github এ এবং সার্ভ হচ্ছে github pages এর মধ্যে থেকে।
+              </p>
+              <p>
+                তথ্য দিয়ে সহযোগিতা করতে চাইলে রিপোজিটরি fork করে নির্দিষ্ট দেশের ফোল্ডারের মধ্যে গিয়ে নির্দিষ্ট মাসের নামের ফোল্ডারের মধ্যে থাকা নির্দিষ্ট তারিখের ফাইলে একটি সহজ ফরম্যাট মেনে একটি ঘটনার তথ্য যুক্ত করতে পারেন। ফরম্যাটটি হচ্ছে- ঘটনার সাল, বর্ণনা, ট্যাগ এবং রেফারেন্স এর মধ্যে একটি করে নতুন লাইন থাকবে এবং একটি ঘটনা থেকে আরেকটি ঘটনার তথ্যের মধ্যে তিনটি ড্যাশ থাকবে।
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>     
+
+    <div class="modal fade contact-us-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">যোগাযোগ করুন</h4>
+            </div>
+            <div class="modal-body">
+              <p>আপনার যেকোনো মন্তব্য অথবা সমস্যার কথা জানান <a href="https://github.com/nuhil/historyof.today/issues" target="_blank">এখানে</a> গিয়ে একটি ইস্যু তৈরির মাধ্যমে।</p>
+            </div>
+        </div>
+      </div>
+    </div>     
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
