@@ -5,3 +5,7 @@ a {
 a.logo:hover {
 	text-decoration: none;
 }
+
+#factref {
+	word-wrap: break-word;
+}
