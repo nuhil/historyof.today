@@ -1,2 +1,2 @@
 # historyof.today
-Open source web application under historyof.today
+Open source client side web application for history of current date
